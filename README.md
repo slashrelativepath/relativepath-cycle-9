@@ -13,3 +13,8 @@ if no keys, create a keypair
 get public key for GitHub
 `cat $HOME/.ssh/id_ed25519.pub`
 add public key to GitHub
+
+## powershell
+setup local environment in powershell
+`Set-ExecutionPolicy Bypass -Scope Process -Force; ./setup.ps1`
+
