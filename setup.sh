@@ -8,3 +8,10 @@ else
 fi
 
 # git should be installed
+if (which git)
+then
+  echo 'git is already installed'
+else
+  echo 'installing git'
+  brew install git
+fi
