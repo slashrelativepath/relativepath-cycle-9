@@ -18,7 +18,11 @@ add public key to GitHub
 setup local environment in powershell
 `Set-ExecutionPolicy Bypass -Scope Process -Force; ./setup.ps1`
 
-## Darwin(Mac) Or Linux
+## Darwin(Mac)
 setup local environment 
-`$SHELL setup.sh`
+`$SHELL setup-darwin.sh`
+
+## Linux         
+setup local environment
+`$SHELL setup-linux.sh`
 

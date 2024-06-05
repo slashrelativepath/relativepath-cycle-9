@@ -1,10 +1,13 @@
+# local setup script
+
 # nano should be installed
+
 if (which nano)
 then
   echo "nano is already installed"
 else
   echo "installing nano"
-  brew install nano
+  apt install -y nano
 fi
 
 # git should be installed
@@ -13,5 +16,5 @@ then
   echo 'git is already installed'
 else
   echo 'installing git'
-  brew install git
+  apt install -y git
 fi
