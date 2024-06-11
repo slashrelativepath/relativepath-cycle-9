@@ -18,3 +18,15 @@ else
   echo 'installing git'
   apt install -y git
 fi
+
+# multipass should be installed
+
+if (multipass version)
+then
+  echo 'multipass is already installed'
+else
+  echo 'installing multipass'
+  snap install  multipass
+fi
+
+
