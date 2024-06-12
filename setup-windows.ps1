@@ -17,3 +17,13 @@ else
   echo "creating ssh keypair"
   ssh-keygen -t ed25519 -C $env:USERNAME -f $env:HOMEPATH/.ssh/id_ed25519 -N `"`"
 }
+
+if (get-command git)
+{
+  echo "git installed"
+}
+else
+{
+  echo "installing git"
+  choco install -y git.install --params "'/GitAndUnixToolsOnPath /WindowsTerminal /NoAutoCrlf'"
+}
