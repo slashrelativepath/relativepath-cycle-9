@@ -15,6 +15,7 @@ get public key for GitHub
 add public key to GitHub
 
 ## powershell
+ensure you are in an adminstrator powershell.
 setup local environment in powershell
 `Set-ExecutionPolicy Bypass -Scope Process -Force; ./setup-windows.ps1`
 
