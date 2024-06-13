@@ -27,3 +27,14 @@ else
   echo "installing git"
   choco install -y git.install --params "'/GitAndUnixToolsOnPath /WindowsTerminal /NoAutoCrlf'"
 }
+
+if (get-command multipass)
+{
+  echo "multipass installed"
+}
+else
+{
+  echo "installing multipass & virtualbox"
+  choco install -y virtualbox
+  choco install -y multipass --params="'/HyperVisor:VirtualBox'"
+}
