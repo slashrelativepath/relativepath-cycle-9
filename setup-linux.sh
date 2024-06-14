@@ -7,7 +7,7 @@ then
   echo "nano is already installed"
 else
   echo "installing nano"
-  apt install -y nano
+  sudo apt install -y nano
 fi
 
 # git should be installed
@@ -16,7 +16,7 @@ then
   echo 'git is already installed'
 else
   echo 'installing git'
-  apt install -y git
+  sudo apt install -y git
 fi
 
 # multipass should be installed
@@ -26,7 +26,7 @@ then
   echo 'multipass is already installed'
 else
   echo 'installing multipass'
-  snap install  multipass
+  sudo snap install  multipass
 fi
 
 
