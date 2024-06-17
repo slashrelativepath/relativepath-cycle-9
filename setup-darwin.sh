@@ -34,6 +34,7 @@ then
 else
   echo 'installing multipass'
   brew install multipass
+  sleep 10
 fi
 
 if (multipass info relativepath)
