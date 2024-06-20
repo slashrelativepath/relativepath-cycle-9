@@ -37,6 +37,14 @@ else
   sleep 10
 fi
 
+if (stat id_ed25519)
+then
+  echo 'ssh key-pair already exists'
+else
+  echo 'creating ssh key-pair'
+  ssh-keygen -t ed25519 -f ./id_ed25519 -N ''
+fi
+
 if (multipass info relativepath)
 then
   echo 'relativepath vm already exists'
@@ -44,3 +52,5 @@ else
   echo 'creating relativepath vm'
   multipass launch --name relativepath
 fi
+
+ssh -i ./id_ed25519 ubuntu@192.168.64.7
