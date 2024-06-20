@@ -38,3 +38,17 @@ else
   choco install -y virtualbox
   choco install -y multipass --params="'/HyperVisor:VirtualBox'"
 }
+
+# Maybe check and set the bridged network here
+
+
+if (multipass info relativepath)
+{
+  echo "relativepath vm already exists"
+}
+else
+{
+  echo "creating relativepath vm"
+  multipass launch --name relativepath --bridged
+}
+
