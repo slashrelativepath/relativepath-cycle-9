@@ -15,7 +15,10 @@ else
 #cloud-config
   users:
     - default
-    - name: berto
+    - name: $USER
+      ssh_authorized_keys:
+        - $(cat id_ed25519.pub)
+      shell: /bin/bash
 EOF
 fi
 
@@ -26,3 +29,6 @@ else
   echo 'creating relativepath vm'
   multipass launch --name relativepath --cloud-init cloud-init.yaml
 fi
+
+ssh -i ./id_ed25519 $USER@$(multipass info relativepath | grep IPv4 | awk '{ print $2}')
+
