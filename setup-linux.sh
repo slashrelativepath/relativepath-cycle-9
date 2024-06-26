@@ -28,11 +28,3 @@ else
   echo 'installing multipass'
   sudo snap install  multipass
 fi
-
-if (multipass info relativepath)
-then
-  echo 'relativepath vm already exists'
-else
-  echo 'Creating relativepathvm'
-  multipass launch --name relativepath
-fi

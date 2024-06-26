@@ -36,11 +36,3 @@ else
   brew install multipass
   sleep 10
 fi
-
-if (multipass info relativepath)
-then
-  echo 'relativepath vm already exists'
-else
-  echo 'creating relativepath vm'
-  multipass launch --name relativepath
-fi
